@@ -18,8 +18,6 @@ void setup() {
   pinMode(11, OUTPUT);
 
   Serial.begin(9600);
-
-
 }
 
 void loop() {
@@ -34,18 +32,27 @@ void loop() {
   distance = duration * 0.034 / 2;
 
   Serial.println(distance);
-  delay(100);
 
-  if (distance >= 40) {
+  if (distance <= 50 && distance >= 25) {
     digitalWrite(2, LOW);
     digitalWrite(3, HIGH);
     digitalWrite(4, LOW);
     digitalWrite(5, HIGH);
     analogWrite(10, 90);
     analogWrite(11, 90);
-  }
-
-  else {
+  } else if (distance >= 15 && distance <= 25) {
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+  } else if (distance <= 15) {
+    digitalWrite(2, HIGH);
+    digitalWrite(3, LOW);
+    digitalWrite(4, HIGH);
+    digitalWrite(5, LOW);
+    analogWrite(10, 90);
+    analogWrite(11, 90);
+  } else {
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
