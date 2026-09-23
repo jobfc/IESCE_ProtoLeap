@@ -14,12 +14,12 @@ const int TR = 8, ER = 11;  // Right
 
 // ---------------- THRESHOLDS ----------------
 const int WALL  = 30;   // Side opening threshold
-const int FRONT = 24;   // Front obstacle threshold
+const int FRONT = 50;   // Front obstacle threshold
 
 // ---------------- TURN TIMES ----------------
-const unsigned long LEFT_TIME  = 350;
-const unsigned long RIGHT_TIME = 350;
-const unsigned long UTURN_TIME = 700;
+const unsigned long LEFT_TIME  = 500;
+const unsigned long RIGHT_TIME = 500;
+const unsigned long UTURN_TIME = 1000;
 
 
 // =====================================================
